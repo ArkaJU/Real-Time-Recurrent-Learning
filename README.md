@@ -20,9 +20,8 @@ That implies The gradient information at t + 1 is  forward  propagated  to  comp
   The model will be learned as and when the data comes; most of the control problems must be dealt online.
   
   
- ![](Images/NPTEL slide.jpg)                             ![](Images/architecture.png)
-
-
+ ![](Images/NPTEL slide.jpg)                             
+ 
 
 ## Overview:
 
@@ -39,6 +38,11 @@ A 2-D nonlinear system mathematical model is used to describe the dynamics of th
 
 ![](Images/Output.png)
 
+![](Images/architecture.png)
+
+
+
+
 ## Learning algorithm:
 
 When RTRNs are used to approximate and control an unknown nonlinear system through an on-line learning process, they may be considered as subsystems of an adaptive control system. The weights of the networks  are initiliased randomly and need to be updated using a dynamical learning algorithm during the control process.
@@ -48,9 +52,12 @@ When RTRNs are used to approximate and control an unknown nonlinear system throu
   
 
 
+
 ## Control:
 
 The learned weights of both the RTRNs are combined together to establish a control rule. This control rule updates the control inputs U1 and U2 on per timestep basis and helps to  approximate the system output to the desired output.
+
+
 
 
 ![](Images/control.png)
@@ -58,10 +65,20 @@ The learned weights of both the RTRNs are combined together to establish a contr
 
 
 
+
+
+
 ## Dataset:
 
 The dataset is obtained by hardcoding the dynamics(given in terms of equations) obtaining outputs corresponding to inputs. The equations are borrowed from [2], which is a paper on control and stability analysis for an autonomous helicopter. The columns represent factors like angular velocity, vertical veolicy, collective pitch angle etc.
-  Note that the dataset is used only for obtaining values of mean and standard deviation for normalisiation purposes and chossing an arbitrary initial value. Nowhere are they required for the learning algorithm.
+  
+### NOTE: 
+The dataset was used only for obtaining values of mean and standard deviation for normalisiation purposes and choosing an arbitrary initial value. Nowhere are they required for the learning algorithm.
+
+
+
+
+
 
 
 
@@ -73,6 +90,11 @@ and maintained constant throughout.
 3. Except the first few timesteps, only one iteration is required to converge for both the RTRNs.
 
 Some of the plots of the plant output for different random number seeds are given below:
+
+
+
+
+
 
 
 ![](Images/Results/1.png)
