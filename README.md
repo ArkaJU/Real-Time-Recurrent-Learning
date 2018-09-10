@@ -7,6 +7,13 @@
 This project utilizes a class of discrete-time Recurrent Neural Networks(RNNs) known as Real Time Recurrent Networks(RTRNs) to obtain the desired response of a dynamic
 control system. The system considered is a Multi Input Multi Output(MIMO) system.
 
+## Dependencies:
+
+- Numpy
+- Matplotlib
+- Pandas
+- Scipy
+- Math
 
 ## Real Time Recurrent Learning(RTRL) v/s Back Propagation Through Time(BPTT)
 
@@ -20,7 +27,7 @@ That implies The gradient information at t + 1 is  forward  propagated  to  comp
   The model will be learned as and when the data comes; most of the control problems must be dealt online.
   
   
- ![](Images/NPTEL slide.jpg)                             
+ ![](Images/NPTEL_slide.jpg)                             
  
 
 ## Overview:
