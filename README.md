@@ -5,7 +5,7 @@
 
 
 This project utilizes a class of discrete-time Recurrent Neural Networks(RNNs) known as Real Time Recurrent Networks(RTRNs) to obtain the desired response of a dynamic
-control system. The system considered is a Multi Input Multi Output(MIMO) system.
+control system. The  system considered is a model of an autonomous helicopter.
 
 ## Dependencies:
 
@@ -77,10 +77,12 @@ The learned weights of both the RTRNs are combined together to establish a contr
 
 ## Dataset:
 
-The dataset is obtained by hardcoding the dynamics(given in terms of equations) obtaining outputs corresponding to inputs. The equations are borrowed from [2], which is a paper on control and stability analysis for an autonomous helicopter. The columns represent factors like angular velocity, vertical veolicy, collective pitch angle etc.
+The dataset is obtained by hardcoding the dynamics(given in terms of equations) obtaining outputs corresponding to inputs. The equations are borrowed from [2], which is a paper on control and stability analysis for an autonomous helicopter. The columns represent factors like angular velocity, vertical velocity, collective pitch angle etc.
   
 ### NOTE: 
-The dataset was used only for obtaining values of mean and standard deviation for normalisiation purposes and choosing an arbitrary initial value. Nowhere are they required for the learning algorithm.
+ - The dataset was used only for obtaining values of mean and standard deviation for normalisation purposes and choosing an arbitrary initial value. Nowhere are they required for the learning algorithm.
+ 
+ - A small number delta was added to the intermediate matrix to avoid singularity.
 
 
 
