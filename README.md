@@ -35,7 +35,7 @@ That implies The gradient information at t + 1 is  forward  propagated  to  comp
 Two RTRNs, based on the same network architecture, are utilized in the learning control system. 
 
 1. One is used to approximate the non- linear system
-2. other is used to mimic the desired system response output. 
+2. Other is used to mimic the desired system response output. 
 
 The learning rule is achieved by combining the two RTRNs to form the neural network control system.
 
